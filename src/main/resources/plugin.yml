@@ -1,0 +1,36 @@
+name: Core
+version: @version@
+main: net.greemdev.core.Main
+prefix: Core
+depend: [LuckPerms, Essentials]
+authors: [GreemDev]
+description: The Core plugin for the GreemNetwork server.
+website: https://greemdev.net
+
+commands:
+  consolesay:
+    description: "Says something as the console, only usable from console."
+    aliases: ["csay", "cs"]
+    usage: "/consolesay <message>"
+    permission: "core.consolesay"
+    permission-message: "You can't use that command."
+  randomteleport:
+    description: "Teleports the player to a random place in the SMP world."
+    aliases: ["rtp"]
+    usage: "/randomteleport"
+  eval:
+    description: "Evaluates JS code."
+    usage: "/eval <code>"
+  skyblock:
+    description: "Teleports you to the Skyblock spawn."
+    usage: "/skyblock"
+  smp:
+    description: "Teleports you to the SMP spawn."
+    usage: "/smp"
+  name:
+    description: "Names the item currently in your hand."
+    usage: "/name <newName>"
+    permission: "core.name"
+  rankup:
+    description: "Moves the target user up a rank. If the user is Staff, this does not apply."
+    usage: "/rankup <user>"
