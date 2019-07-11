@@ -1,11 +1,11 @@
 package net.greemdev.core.commands;
 
+import net.greemdev.core.util.CheckUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -16,10 +16,8 @@ public class NameCommand implements CommandExecutor {
             sender.sendMessage(ChatColor.DARK_RED + "You do not have access to that command.");
             return true;
         }
-        if (sender instanceof ConsoleCommandSender) {
-            sender.sendMessage("Console can't use this command, jackass.");
-            return true;
-        }
+        if (CheckUtil.warnIfConsole(sender)) return true;
+
         if (args.length < 1) {
             sender.sendMessage(ChatColor.DARK_RED + "You didn't provide a name.");
             return true;
