@@ -24,12 +24,6 @@ public class NameCommand implements CommandExecutor {
         }
 
         ItemStack item = Bukkit.getPlayer(sender.getName()).getInventory().getItemInMainHand();
-
-        if (item == null) {
-            sender.sendMessage(ChatColor.DARK_RED + "You're not holding anything.");
-            return true;
-        }
-
         ItemMeta meta = item.getItemMeta();
 
         if (meta == null) {

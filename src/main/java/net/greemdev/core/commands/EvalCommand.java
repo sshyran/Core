@@ -30,7 +30,10 @@ public class EvalCommand implements CommandExecutor {
 
         try {
             Object o = se.eval(code);
-            if (o == null) return true;
+            if (o == null) {
+                sender.sendMessage(ChatColor.DARK_RED + "Output from Eval: " + ChatColor.RED + "null, but it succeeded");
+                return true;
+            }
             sender.sendMessage(ChatColor.DARK_RED + "Output from Eval: " + ChatColor.RED + o.toString());
         } catch (ScriptException e) {
             sender.sendMessage(ChatColor.DARK_RED + "That code produced an error: " + ChatColor.RED + e.getMessage());
