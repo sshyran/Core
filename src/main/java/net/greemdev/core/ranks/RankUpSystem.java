@@ -38,7 +38,7 @@ public class RankUpSystem {
         }
 
         if (newGroup == null) {
-            sender.sendMessage(ChatColor.RED + "ERROR: " + ChatColor.DARK_RED + "Player's current group can not be ranked up from.");
+            sender.sendMessage(ChatColor.RED + "ERROR: " + ChatColor.DARK_RED + "Player's current group (" + user.getPrimaryGroup() + ") cannot be ranked up from.");
             return;
         }
 

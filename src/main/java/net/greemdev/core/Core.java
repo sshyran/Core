@@ -3,7 +3,8 @@ package net.greemdev.core;
 import net.greemdev.core.commands.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class Main extends JavaPlugin {
+@SuppressWarnings("unused")
+public final class Core extends JavaPlugin {
 
     @Override
     public void onEnable() {
