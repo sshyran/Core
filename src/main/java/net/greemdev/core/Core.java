@@ -1,9 +1,10 @@
 package net.greemdev.core;
 
 import net.greemdev.core.commands.*;
+import net.greemdev.core.listeners.PlayerJoinListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
-@SuppressWarnings("unused")
+@SuppressWarnings("ALL")
 public final class Core extends JavaPlugin {
 
     @Override
@@ -16,6 +17,7 @@ public final class Core extends JavaPlugin {
         this.getCommand("Skyblock").setExecutor(new SkyblockCommand());
         this.getCommand("Name").setExecutor(new NameCommand());
         this.getCommand("RankUp").setExecutor(new RankUpCommand());
+        this.getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
     }
 
     @Override

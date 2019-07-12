@@ -20,7 +20,7 @@ repositories {
 }
 
 dependencies {
-    compile "com.destroystokyo.paper:paper-api:1.12.2-R0.1-SNAPSHOT"
+    compile "com.destroystokyo.paper:paper-api:1.14.3-R0.1-SNAPSHOT"
     compile "me.lucko.luckperms:luckperms-api:4.4"
     compile 'com.discordsrv:discordsrv:1.16.6'
 }

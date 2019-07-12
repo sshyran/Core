@@ -1,6 +1,6 @@
 name: Core
 version: @version@
-main: net.greemdev.core.Main
+main: net.greemdev.core.Core
 prefix: Core
 depend: [LuckPerms, Essentials]
 authors: [GreemDev]
@@ -34,3 +34,7 @@ commands:
   rankup:
     description: "Moves the target user up a rank. If the user is Staff, this does not apply."
     usage: "/rankup <user>"
+  plugins:
+    description: "Disallows users to see the plugins list."
+    usage: "/plugins"
+    aliases: ["pl"]
