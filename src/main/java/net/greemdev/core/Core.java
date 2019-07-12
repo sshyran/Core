@@ -7,6 +7,11 @@ import org.bukkit.plugin.java.JavaPlugin;
 @SuppressWarnings("ALL")
 public final class Core extends JavaPlugin {
 
+    private static Core plugin;
+    public static Core getPlugin() {
+        return plugin;
+    }
+
     @Override
     public void onEnable() {
         this.getLogger().info("Loading Core...");
@@ -17,7 +22,9 @@ public final class Core extends JavaPlugin {
         this.getCommand("Skyblock").setExecutor(new SkyblockCommand());
         this.getCommand("Name").setExecutor(new NameCommand());
         this.getCommand("RankUp").setExecutor(new RankUpCommand());
+        this.getCommand("DelayedRestart").setExecutor(new DelayedRestartCommand());
         this.getServer().getPluginManager().registerEvents(new PlayerJoinListener(), this);
+        this.plugin = this;
     }
 
     @Override

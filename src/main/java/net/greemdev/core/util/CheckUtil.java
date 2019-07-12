@@ -20,6 +20,10 @@ public class CheckUtil {
         return false;
     }
 
+    public static void warn(CommandSender s) {
+        s.sendMessage(ChatColor.DARK_RED + "You do not have permission to use this command.");
+    }
+
     public static boolean warnIfPlayer(CommandSender s) {
         if (!(isConsole(s))) {
             s.sendMessage(ChatColor.DARK_RED + "This command only be used from Console.");

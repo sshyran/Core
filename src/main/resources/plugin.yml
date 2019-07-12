@@ -18,6 +18,7 @@ commands:
     description: "Teleports the player to a random place in the SMP world."
     aliases: ["rtp"]
     usage: "/randomteleport"
+    permission: "core.randomteleport"
   eval:
     description: "Evaluates JS code."
     usage: "/eval <code>"
@@ -34,7 +35,14 @@ commands:
   rankup:
     description: "Moves the target user up a rank. If the user is Staff, this does not apply."
     usage: "/rankup <user>"
+    permission: "core.rankup"
   plugins:
     description: "Disallows users to see the plugins list."
     usage: "/plugins"
     aliases: ["pl"]
+  delayedrestart:
+    description: "Restarts the server in 5 seconds, with a countdown."
+    usage: "/delayedrestart"
+    aliases: ["drestart"]
+    permission: "core.delayedrestart"
+
