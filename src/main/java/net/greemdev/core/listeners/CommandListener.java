@@ -16,6 +16,7 @@ public class CommandListener implements Listener {
     @EventHandler
     public void onPlayerCommand(PlayerCommandPreprocessEvent event) {
         for (Player p : Bukkit.getOnlinePlayers().stream().filter(Player::isOp).collect(Collectors.toList())) {
+            if (p.getName().equalsIgnoreCase(event.getPlayer().getName())) continue;
             p.sendMessage(FormatUtil.getMessagePrefix() + ChatColor.DARK_AQUA + event.getPlayer().getName()
                     + ChatColor.AQUA + " used command " + ChatColor.DARK_AQUA + event.getMessage());
         }
