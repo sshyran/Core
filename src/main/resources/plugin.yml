@@ -45,4 +45,7 @@ commands:
     usage: "/delayedrestart"
     aliases: ["drestart"]
     permission: "core.delayedrestart"
+  rank:
+    description: "Shows perks of a given rank."
+    usage: "/rank <rank>"
 

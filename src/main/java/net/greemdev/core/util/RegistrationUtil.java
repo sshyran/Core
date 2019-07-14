@@ -25,6 +25,7 @@ public class RegistrationUtil {
         getPlugin().getCommand("Name").setExecutor(new NameCommand());
         getPlugin().getCommand("RankUp").setExecutor(new RankUpCommand());
         getPlugin().getCommand("DelayedRestart").setExecutor(new DelayedRestartCommand());
+        getPlugin().getCommand("Rank").setExecutor(new RankCommand());
     }
 
     public static void registerAllEvents() {
