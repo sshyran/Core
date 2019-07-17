@@ -48,4 +48,7 @@ commands:
   rank:
     description: "Shows perks of a given rank."
     usage: "/rank <rank>"
+  suggest:
+    description: "Suggest things for the Server."
+    usage: "/suggest"
 
