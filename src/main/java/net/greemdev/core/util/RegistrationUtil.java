@@ -1,6 +1,7 @@
 package net.greemdev.core.util;
 
 import net.greemdev.core.commands.*;
+import net.greemdev.core.commands.overridden.PluginsCommand;
 import net.greemdev.core.listeners.CommandListener;
 
 import static net.greemdev.core.Core.getPlugin;
@@ -16,6 +17,7 @@ public class RegistrationUtil {
     }
 
     public static void registerAllCommands() {
+        getPlugin().getCommand("Plugins").setExecutor(new PluginsCommand());
         getPlugin().getCommand("Broadcast").setExecutor(new BroadcastCommand());
         getPlugin().getCommand("ConsoleSay").setExecutor(new ConsoleSayCommand());
         getPlugin().getCommand("RandomTeleport").setExecutor(new RandomTeleportCommand());

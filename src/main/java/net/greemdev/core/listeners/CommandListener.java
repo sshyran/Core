@@ -24,6 +24,7 @@ public class CommandListener implements Listener {
 
     @EventHandler
     public void onServerCommand(ServerCommandEvent event) {
+        if (event.getCommand().equalsIgnoreCase("/list")) return;
         for (Player p : Bukkit.getOnlinePlayers().stream().filter(Player::isOp).collect(Collectors.toList())) {
             p.sendMessage(FormatUtil.getMessagePrefix() + ChatColor.DARK_AQUA + "CONSOLE"
                     + ChatColor.AQUA + " used command " + ChatColor.DARK_AQUA + "/" + event.getCommand());
