@@ -2,8 +2,6 @@ package net.greemdev.core.commands;
 
 import github.scarsz.discordsrv.DiscordSRV;
 import github.scarsz.discordsrv.util.DiscordUtil;
-import me.lucko.luckperms.api.LuckPermsApi;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -26,7 +24,6 @@ public class EvalCommand implements CommandExecutor {
         se.put("server", sender.getServer());
         se.put("jda", DiscordUtil.getJda());
         se.put("dsrv", DiscordSRV.getPlugin());
-        se.put("luckperms", Bukkit.getServicesManager().getRegistration(LuckPermsApi.class).getProvider());
 
         try {
             Object o = se.eval(code);

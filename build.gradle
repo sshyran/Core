@@ -9,20 +9,15 @@ targetCompatibility = '1.8'
 repositories {
     mavenCentral()
     maven { url = 'https://nexus.scarsz.me/content/groups/public/' }
-    maven {
-        name = 'destroystokyo-repo'
-        url = 'https://repo.destroystokyo.com/repository/maven-public/'
-    }
-    maven {
-        name = 'sonatype'
-        url = 'https://oss.sonatype.org/content/groups/public/'
-    }
+    maven { url = 'https://repo.destroystokyo.com/repository/maven-public/' }
+    maven { url = 'https://oss.sonatype.org/content/groups/public/' }
+    maven { url = 'https://jcenter.bintray.com' }
+    maven { url = 'https://nexus.vankka.dev/repository/maven-public' }
 }
 
 dependencies {
-    compile "com.destroystokyo.paper:paper-api:1.14.3-R0.1-SNAPSHOT"
-    compile "me.lucko.luckperms:luckperms-api:4.4"
-    compile 'com.discordsrv:discordsrv:1.16.6'
+    compile "com.destroystokyo.paper:paper-api:1.16.1-R0.1-SNAPSHOT"
+    compile 'com.discordsrv:discordsrv:1.19.1'
 }
 
 import org.apache.tools.ant.filters.ReplaceTokens
