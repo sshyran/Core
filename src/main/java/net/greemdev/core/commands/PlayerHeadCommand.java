@@ -1,7 +1,9 @@
 package net.greemdev.core.commands;
 
 import net.greemdev.core.util.CommandUtil;
+import net.greemdev.core.util.FormatUtil;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -21,6 +23,10 @@ public class PlayerHeadCommand implements CommandExecutor {
         Player p = Objects.requireNonNull(CommandUtil.asPlayer(sender));
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(),
                 "minecraft:give " + p.getName() + " minecraft:player_head{SkullOwner:\"" + args[0] + "\"}");
+        p.sendMessage(FormatUtil.getMessagePrefix() +
+                ChatColor.GOLD + "You've been given " +
+                ChatColor.DARK_AQUA + ChatColor.BOLD + args[0] +
+                ChatColor.RESET + ChatColor.GOLD + "'s head.");
         return true;
     }
 }
