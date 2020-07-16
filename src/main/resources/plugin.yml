@@ -1,10 +1,11 @@
 name: Core
 version: @version@
 main: net.greemdev.core.Core
+api-version: 1.16
 prefix: Core
 depend: [Essentials, DiscordSRV]
 authors: [GreemDev]
-description: The Core plugin for the GreemNetwork server.
+description: The Core plugin for the Gamer Lounge server.
 website: https://greemdev.net
 
 commands:
@@ -21,7 +22,7 @@ commands:
     permission: "core.broadcast"
     permission-message: "You can't use that command."
   randomteleport:
-    description: "Teleports the player to a random place in the SMP world."
+    description: "Teleports the player to a random place in the world."
     aliases: ["rtp"]
     usage: "/randomteleport"
     permission: "core.randomteleport"
@@ -41,4 +42,9 @@ commands:
     usage: "/delayedrestart"
     aliases: ["drestart"]
     permission: "core.delayedrestart"
+  playerhead:
+    description: "Give yourself the given player's head."
+    usage: "/playerhead <player>"
+    aliases: ["corehead", "phead"]
+    permission: "core.playerhead"
 

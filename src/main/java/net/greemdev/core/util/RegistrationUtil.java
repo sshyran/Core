@@ -17,6 +17,7 @@ public class RegistrationUtil {
     }
 
     public static void registerAllCommands() {
+        getPlugin().getCommand("PlayerHead").setExecutor(new PlayerHeadCommand());
         getPlugin().getCommand("Plugins").setExecutor(new PluginsCommand());
         getPlugin().getCommand("Broadcast").setExecutor(new BroadcastCommand());
         getPlugin().getCommand("ConsoleSay").setExecutor(new ConsoleSayCommand());

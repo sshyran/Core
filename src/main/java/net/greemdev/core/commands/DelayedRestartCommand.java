@@ -1,18 +1,19 @@
 package net.greemdev.core.commands;
 
 import net.greemdev.core.Core;
-import net.greemdev.core.util.CheckUtil;
+import net.greemdev.core.util.CommandUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.jetbrains.annotations.NotNull;
 
 public class DelayedRestartCommand implements CommandExecutor {
 
     @Override
-    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (!(sender.hasPermission("core.delayedrestart") || CheckUtil.isConsole(sender) || sender.isOp())) {
-            CheckUtil.warn(sender);
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
+        if (!(sender.hasPermission("core.delayedrestart") || CommandUtil.isConsole(sender) || sender.isOp())) {
+            CommandUtil.noPermission(sender);
             return true;
         }
 

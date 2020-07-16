@@ -13,6 +13,7 @@ repositories {
     maven { url = 'https://oss.sonatype.org/content/groups/public/' }
     maven { url = 'https://jcenter.bintray.com' }
     maven { url = 'https://nexus.vankka.dev/repository/maven-public' }
+    maven { url = 'https://ci.ender.zone/plugin/repository/everything/'}
 }
 
 dependencies {

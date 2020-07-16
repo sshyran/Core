@@ -1,16 +1,18 @@
 package net.greemdev.core.commands;
 
 import github.scarsz.discordsrv.DiscordSRV;
-import net.greemdev.core.util.CheckUtil;
+import net.greemdev.core.util.CommandUtil;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.jetbrains.annotations.NotNull;
 
 public class ConsoleSayCommand implements CommandExecutor {
 
-    public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
-        if (CheckUtil.warnIfPlayer(sender)) return true;
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String commandLabel, @NotNull String[] args) {
+        if (CommandUtil.warnIfPlayer(sender)) return true;
+        if (CommandUtil.warnIfEmptyArgs(sender, args)) return true;
 
         DiscordSRV.getPlugin().getMainTextChannel().sendMessage("[Console] \u00BB " + String.join(" ", args)).queue();
         sender.getServer().broadcastMessage(ChatColor.GRAY + "[" + ChatColor.DARK_RED + ChatColor.BOLD + "Console" + ChatColor.GRAY + "]"

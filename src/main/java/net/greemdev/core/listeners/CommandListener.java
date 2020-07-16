@@ -11,7 +11,7 @@ import org.bukkit.event.server.ServerCommandEvent;
 
 import java.util.stream.Collectors;
 
-public class CommandListener implements Listener {
+public class CommandListener implements Listener { //basically just CommandSpy
 
     @EventHandler
     public void onPlayerCommand(PlayerCommandPreprocessEvent event) {
@@ -24,7 +24,7 @@ public class CommandListener implements Listener {
 
     @EventHandler
     public void onServerCommand(ServerCommandEvent event) {
-        if (event.getCommand().equalsIgnoreCase("/list")) return;
+        if (event.getCommand().equalsIgnoreCase("list")) return;
         for (Player p : Bukkit.getOnlinePlayers().stream().filter(Player::isOp).collect(Collectors.toList())) {
             p.sendMessage(FormatUtil.getMessagePrefix() + ChatColor.DARK_AQUA + "CONSOLE"
                     + ChatColor.AQUA + " used command " + ChatColor.DARK_AQUA + "/" + event.getCommand());
