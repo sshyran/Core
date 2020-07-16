@@ -1,9 +1,11 @@
 package net.greemdev.core.commands;
 
+import net.greemdev.core.objects.RandomTeleportCoords;
 import net.greemdev.core.util.CommandUtil;
 import net.greemdev.core.util.FormatUtil;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.block.Block;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -25,13 +27,25 @@ public class RandomTeleportCommand implements CommandExecutor {
         if (CommandUtil.warnIfConsole(sender)) return true;
         Player player  = Objects.requireNonNull(CommandUtil.asPlayer(sender));
 
-        int x = this.random.nextInt(20000 - -20000) + -20000;
-        int z = this.random.nextInt(20000 - -20000) + -20000;
-        int y = player.getWorld().getHighestBlockAt(x, z).getY() + 1;
+        RandomTeleportCoords coords;
+        do {
+            coords = this.findDestination(player);
+        } while (coords.getBlock().isLiquid());
 
-        player.teleport(new Location(player.getWorld(), x, y, z));
-        sender.sendMessage(FormatUtil.getMessagePrefix() + ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Teleporting you to " + x + ", " + (y-1) + ", " + z + "!");
+
+        player.teleport(new Location(player.getWorld(), coords.getX(), coords.getY(), coords.getZ()));
+        sender.sendMessage(FormatUtil.getMessagePrefix() + ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Teleporting you to " + coords + "!");
         return true;
 
+    }
+
+    private RandomTeleportCoords findDestination(Player player) {
+        int x = this.random.nextInt(20000 - -20000) + -20000;
+        int z = this.random.nextInt(20000 - -20000) + -20000;
+        Block block = player.getWorld().getHighestBlockAt(x, z);
+        int y = block.getY() + 1;
+
+
+        return new RandomTeleportCoords(x, y, z, block);
     }
 }

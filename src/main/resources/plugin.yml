@@ -10,7 +10,7 @@ website: https://greemdev.net
 
 commands:
   consolesay:
-    description: "Says something as the console, only usable from console."
+    description: "Says something as the console. Usable by Console itself and operators."
     aliases: ["csay", "cs"]
     usage: "/consolesay <message>"
     permission: "core.consolesay"
@@ -34,7 +34,7 @@ commands:
     usage: "/name <newName>"
     permission: "core.name"
   plugins:
-    description: "Disallows users to see the plugins list."
+    description: "Disallows normal users to see the plugins list."
     usage: "/plugins"
     aliases: ["pl"]
   delayedrestart:

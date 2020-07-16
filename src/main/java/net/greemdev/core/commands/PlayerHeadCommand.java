@@ -14,7 +14,7 @@ public class PlayerHeadCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if (CommandUtil.warnIfConsole(sender) || CommandUtil.warnIfEmptyArgs(sender, args)) return true;
-        if (!(sender.hasPermission("core.broadcast") || sender.isOp())) {
+        if (!(sender.hasPermission("core.playerhead") || sender.isOp())) {
             CommandUtil.noPermission(sender);
             return true;
         }

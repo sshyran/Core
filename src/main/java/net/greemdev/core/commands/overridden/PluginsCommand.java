@@ -11,7 +11,7 @@ public class PluginsCommand implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if (CommandUtil.warnIf(sender,
-                (sender.isOp() || sender.hasPermission("core.plugins") || CommandUtil.isConsole(sender)),
+                !(sender.isOp() || sender.hasPermission("core.plugins") || CommandUtil.isConsole(sender)),
                 "I'm sorry, but you do not have permission to perform this command. " +
                 "Please contact the server administrators if you believe that this is in error.")) {
             return true;
