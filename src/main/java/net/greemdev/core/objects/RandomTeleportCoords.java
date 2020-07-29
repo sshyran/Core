@@ -4,13 +4,16 @@ import org.bukkit.block.Block;
 
 public class RandomTeleportCoords {
 
-    public RandomTeleportCoords(int x, int y, int z, Block block) {
+    private RandomTeleportCoords(int x, int y, int z, Block block) {
         this.x = x;
         this.y = y;
         this.z = z;
         this.block = block;
     }
 
+    public static RandomTeleportCoords from(int x, int y, int z, Block block) {
+        return new RandomTeleportCoords(x, y, z, block);
+    }
 
     private final int x;
     private final int y;

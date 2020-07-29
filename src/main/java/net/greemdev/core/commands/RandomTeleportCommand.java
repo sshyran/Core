@@ -24,6 +24,7 @@ public class RandomTeleportCommand implements CommandExecutor {
     private final Random random;
 
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String commandLabel, @NotNull String[] args) {
+        if (CommandUtil.warnIfNotAuthorized(sender, "core.randomteleport")) return true;
         if (CommandUtil.warnIfConsole(sender)) return true;
         Player player  = Objects.requireNonNull(CommandUtil.asPlayer(sender));
 
@@ -34,18 +35,19 @@ public class RandomTeleportCommand implements CommandExecutor {
 
 
         player.teleport(new Location(player.getWorld(), coords.getX(), coords.getY(), coords.getZ()));
-        sender.sendMessage(FormatUtil.getMessagePrefix() + ChatColor.DARK_AQUA + "" + ChatColor.BOLD + "Teleporting you to " + coords + "!");
+        sender.sendMessage(FormatUtil.getMessagePrefix() + ChatColor.GOLD + "Teleporting you to " + ChatColor.BLUE
+                        + coords + ChatColor.GOLD + "!");
         return true;
 
     }
 
     private RandomTeleportCoords findDestination(Player player) {
-        int x = this.random.nextInt(20000 - -20000) + -20000;
-        int z = this.random.nextInt(20000 - -20000) + -20000;
+        int x = this.random.nextInt(50000 - -50000) + -50000;
+        int z = this.random.nextInt(50000 - -50000) + -50000;
         Block block = player.getWorld().getHighestBlockAt(x, z);
         int y = block.getY() + 1;
 
 
-        return new RandomTeleportCoords(x, y, z, block);
+        return RandomTeleportCoords.from(x, y, z, block);
     }
 }

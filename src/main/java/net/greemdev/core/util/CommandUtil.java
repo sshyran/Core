@@ -7,11 +7,16 @@ import org.bukkit.entity.Player;
 
 public class CommandUtil {
 
-    private CommandUtil() {} //restrict instantiation as this is purely a static utility class
+    private CommandUtil() {}
 
     public static boolean isConsole(CommandSender s) {
         return s instanceof ConsoleCommandSender;
     }
+    public static boolean isAdmin(CommandSender s) { return isConsole(s) || s.isOp(); }
+    public static boolean isAuthorized(CommandSender s, String permission) {
+        return isAdmin(s) || s.hasPermission(permission);
+    }
+    public static boolean isPlayer(CommandSender s) { return !isConsole(s); }
 
     public static boolean warnIfConsole(CommandSender s) {
         if (isConsole(s)) {
@@ -21,8 +26,27 @@ public class CommandUtil {
         return false;
     }
 
+    public static boolean warnIfNotAuthorized(CommandSender s, String permission) {
+        if (permission.equalsIgnoreCase("")) {
+            if (isAdmin(s)) {
+                return false;
+            } else {
+                noPermission(s);
+                return true;
+            }
+        }
+
+        if (isAuthorized(s, permission)) {
+            return false;
+        }
+        else {
+            noPermission(s);
+            return true;
+        }
+    }
+
     public static void noPermission(CommandSender s) {
-        s.sendMessage(ChatColor.DARK_RED + "You do not have permission to use this command.");
+        s.sendMessage(FormatUtil.getPermissionError());
     }
 
     public static boolean warnIfPlayer(CommandSender s) {

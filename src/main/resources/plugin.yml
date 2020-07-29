@@ -1,8 +1,8 @@
-name: Core
+name: ServerCore
 version: @version@
 main: net.greemdev.core.Core
 api-version: 1.16
-prefix: Core
+prefix: ServerCore
 depend: [Essentials, DiscordSRV]
 authors: [GreemDev]
 description: The Core plugin for the Gamer Lounge server.
@@ -33,10 +33,6 @@ commands:
     description: "Names the item currently in your hand."
     usage: "/name <newName>"
     permission: "core.name"
-  plugins:
-    description: "Disallows normal users to see the plugins list."
-    usage: "/plugins"
-    aliases: ["pl"]
   delayedrestart:
     description: "Restarts the server in 5 seconds, with a countdown."
     usage: "/delayedrestart"
