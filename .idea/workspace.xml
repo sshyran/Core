@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="Core.main:jar" />
-    </artifacts-to-build>
-  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dbfd9571-e34e-4548-b7a9-35f1f13bbf10" name="Default Changelist" comment="" />
+    <list default="true" id="9b917445-231c-4e91-86d6-fdfd4ce73abe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/Core.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/BroadcastCommand.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/ConsoleSayCommand.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/EvalCommand.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/NameCommand.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/PlayerHeadCommand.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/RandomTeleportCommand.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/listeners/CommandListener.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/listeners/MulticraftListener.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/objects/CommandEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/objects/TeleportCoords.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/util/CommandUtil.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/util/FormatUtil.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/util/ServerUtil.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,31 +40,29 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <task path="$PROJECT_DIR$">
-          <activation />
-        </task>
-        <projects_view />
-      </state>
-    </system>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Z:\IDEs\apps\IDEA-U\ch-0\202.6397.94\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1eey9snt1FIeeO8fxU58h4Rcrnm" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectId" id="1fZgIp4KCkb3cZCyaX6Yoh37If0" />
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -56,59 +71,24 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="true" />
     <property name="last_opened_file_path" value="C:/Coding Projects/Java/Bukkit" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.15136719" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Gradle.Core">
+  <component name="RunManager">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="Core build" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" value="Core build" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="Core" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
@@ -126,244 +106,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Gradle.Core" />
-      </list>
-    </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="project-level" UseSingleDictionary="true" transferred="true" />
-  <component name="SvnConfiguration">
-    <configuration />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dbfd9571-e34e-4548-b7a9-35f1f13bbf10" name="Default Changelist" comment="" />
-      <created>1562700564559</created>
+      <changelist id="9b917445-231c-4e91-86d6-fdfd4ce73abe" name="Default Changelist" comment="" />
+      <created>1596430953489</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1562700564559</updated>
-      <workItem from="1562700566652" duration="1932000" />
-      <workItem from="1562709817923" duration="6673000" />
-      <workItem from="1562726862216" duration="848000" />
-      <workItem from="1562728123902" duration="5404000" />
-      <workItem from="1562785319965" duration="9800000" />
-      <workItem from="1562859317379" duration="9979000" />
-      <workItem from="1562957005670" duration="7156000" />
-      <workItem from="1562982692522" duration="2133000" />
-      <workItem from="1563065970644" duration="2457000" />
-      <workItem from="1563153067122" duration="1302000" />
-      <workItem from="1563324931457" duration="2013000" />
-      <workItem from="1563677695018" duration="598000" />
-      <workItem from="1563946668863" duration="8000" />
-      <workItem from="1594696207360" duration="1641000" />
-      <workItem from="1594698013469" duration="1579000" />
-      <workItem from="1594735917794" duration="700000" />
-      <workItem from="1594747887948" duration="518000" />
-      <workItem from="1594767004369" duration="4907000" />
-      <workItem from="1594915469820" duration="768000" />
-      <workItem from="1594920465738" duration="349000" />
-      <workItem from="1594920857953" duration="16718000" />
-      <workItem from="1594957043497" duration="507000" />
-      <workItem from="1595008499422" duration="1470000" />
-      <workItem from="1595098551953" duration="7374000" />
-      <workItem from="1595111631404" duration="2842000" />
-      <workItem from="1595199899150" duration="1197000" />
-      <workItem from="1595275500436" duration="2831000" />
-      <workItem from="1595290067294" duration="1924000" />
-      <workItem from="1595303058775" duration="1438000" />
-      <workItem from="1595999226610" duration="4366000" />
-      <workItem from="1596430659617" duration="264000" />
+      <updated>1596430953489</updated>
+      <workItem from="1596430954813" duration="1915000" />
+      <workItem from="1596433012379" duration="152000" />
+      <workItem from="1596516316576" duration="1387000" />
+      <workItem from="1596528602878" duration="983000" />
+      <workItem from="1596676532623" duration="1495000" />
+      <workItem from="1596703929916" duration="810000" />
+      <workItem from="1596764207644" duration="1583000" />
     </task>
-    <task id="LOCAL-00001" summary="init">
-      <created>1562809435079</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1562809435079</updated>
-    </task>
-    <task id="LOCAL-00002" summary="fix permission checks in name command">
-      <created>1562818508449</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1562818508449</updated>
-    </task>
-    <task id="LOCAL-00003" summary="offload all ConsoleCommandSender checks/warning messages to CheckUtil">
-      <created>1562819463847</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1562819463847</updated>
-    </task>
-    <task id="LOCAL-00004" summary="proper ItemInMainHand checking in Name command, show something if eval returned nothing">
-      <created>1562859800279</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1562859800279</updated>
-    </task>
-    <task id="LOCAL-00005" summary="gradle.properties">
-      <created>1562859983317</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1562859983317</updated>
-    </task>
-    <task id="LOCAL-00006" summary="move Main.java to Core.java, bump version">
-      <created>1562881547258</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1562881547258</updated>
-    </task>
-    <task id="LOCAL-00007" summary="give everyone default permissions lp group on join&#10;also updated to 1.14.3">
-      <created>1562897205393</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1562897205393</updated>
-    </task>
-    <task id="LOCAL-00008" summary="DelayedRestart command">
-      <created>1562971409055</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1562971409055</updated>
-    </task>
-    <task id="LOCAL-00009" summary="pseudo-commandspy&#10;remove startup logic from onEnable and offload it to utils&#10;bump version">
-      <created>1562974056526</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1562974056526</updated>
-    </task>
-    <task id="LOCAL-00010" summary="ignore self in commandspy">
-      <created>1562987612034</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1562987612034</updated>
-    </task>
-    <task id="LOCAL-00011" summary="rank command">
-      <created>1563068402878</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1563068402878</updated>
-    </task>
-    <task id="LOCAL-00012" summary="suggest command">
-      <created>1563333014825</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1563333014825</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Removed a bunch of commands, upped version numbers, and now RTP teleports you somewhere random in the world you're currently in as opposed to ONLY in the world &quot;SMP&quot;">
-      <created>1594699537437</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1594699537437</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Various changes, commandspy now ignores /list when it comes from the console (multicraft lol)">
-      <created>1594748028430</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1594748028430</updated>
-    </task>
-    <task id="LOCAL-00015" summary="shitload of changes; PlayerHead command added, various command QoL improvements, etc">
-      <created>1594931863241</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1594931863241</updated>
-    </task>
-    <task id="LOCAL-00016" summary="RTP now rerolls your teleport if the block you'd teleport to is a liquid, this is to avoid TPing to oceans and lava pools.">
-      <created>1594935564469</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1594935564469</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Moved RegistrationUtil into the startup file, added confirmation for PlayerHead, and added a colon to FormatUtil.getMessagePrefix().">
-      <created>1594938929212</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1594938929212</updated>
-    </task>
-    <task id="LOCAL-00018" summary="forgot what i did but anyways here's wonderwall">
-      <created>1596003690958</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1596003690958</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="init" />
-    <MESSAGE value="fix permission checks in name command" />
-    <MESSAGE value="offload all ConsoleCommandSender checks/warning messages to CheckUtil" />
-    <MESSAGE value="proper ItemInMainHand checking in Name command, show something if eval returned nothing" />
-    <MESSAGE value="gradle.properties" />
-    <MESSAGE value="move Main.java to Core.java, bump version" />
-    <MESSAGE value="give everyone default permissions lp group on join&#10;also updated to 1.14.3" />
-    <MESSAGE value="DelayedRestart command" />
-    <MESSAGE value="pseudo-commandspy&#10;remove startup logic from onEnable and offload it to utils&#10;bump version" />
-    <MESSAGE value="ignore self in commandspy" />
-    <MESSAGE value="rank command" />
-    <MESSAGE value="suggest command" />
-    <MESSAGE value="Removed a bunch of commands, upped version numbers, and now RTP teleports you somewhere random in the world you're currently in as opposed to ONLY in the world &quot;SMP&quot;" />
-    <MESSAGE value="Various changes, commandspy now ignores /list when it comes from the console (multicraft lol)" />
-    <MESSAGE value="shitload of changes; PlayerHead command added, various command QoL improvements, etc" />
-    <MESSAGE value="RTP now rerolls your teleport if the block you'd teleport to is a liquid, this is to avoid TPing to oceans and lava pools." />
-    <MESSAGE value="Moved RegistrationUtil into the startup file, added confirmation for PlayerHead, and added a colon to FormatUtil.getMessagePrefix()." />
-    <MESSAGE value="forgot what i did but anyways here's wonderwall" />
-    <option name="LAST_COMMIT_MESSAGE" value="forgot what i did but anyways here's wonderwall" />
-  </component>
   <component name="WindowStateProjectService">
-    <state x="712" y="343" key="#Notifications" timestamp="1596430670006">
+    <state x="440" y="94" key="#Project_Structure" timestamp="1596431063550">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="712" y="343" key="#Notifications/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596430670006" />
-    <state x="2685" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1595303144696">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1595291582317" />
-    <state x="2685" y="226" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1595303144696" />
-    <state x="2610" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595099901882">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1594771831717" />
-    <state x="2610" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1595099901882" />
-    <state x="115" y="123" key="CommitChangelistDialog2" timestamp="1596003688414">
+    <state x="440" y="94" key="#Project_Structure/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596431063550" />
+    <state x="751" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1596764888440">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="115" y="123" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596003688414" />
-    <state x="2035" y="123" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1594938928030" />
-    <state x="2404" y="239" key="FileChooserDialogImpl" timestamp="1594946943050">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2404" y="239" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1594946943050" />
-    <state x="2057" y="86" width="1217" height="852" key="SettingsEditor" timestamp="1596430742548">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2057" y="86" width="1217" height="852" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596430742548" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1596003692634">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596003692634" />
-    <state x="2472" y="252" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1594938933795" />
-    <state x="2043" y="140" key="new project wizard" timestamp="1596430949421">
-      <screen x="1920" y="0" width="1920" height="1040" />
-    </state>
-    <state x="2043" y="140" key="new project wizard/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596430949421" />
+    <state x="751" y="235" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596764888440" />
   </component>
 </project>
