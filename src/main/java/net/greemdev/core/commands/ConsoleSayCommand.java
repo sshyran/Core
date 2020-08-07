@@ -10,6 +10,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class ConsoleSayCommand implements CommandExecutor {
 
+    @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command cmd, @NotNull String commandLabel, @NotNull String[] args) {
         if (!CommandUtil.isAdmin(sender)) return true;
         if (CommandUtil.warnIfEmptyArgs(sender, args)) return true;

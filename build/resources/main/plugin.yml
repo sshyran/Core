@@ -1,0 +1,50 @@
+name: ServerCore
+version: 1.5.3
+main: net.greemdev.core.Core
+api-version: 1.16
+prefix: ServerCore
+depend: [Essentials, DiscordSRV]
+authors: [GreemDev]
+description: The Core plugin for the Gamer Lounge server.
+website: https://greemdev.net
+
+commands:
+  consolesay:
+    description: "Says something as the console. Usable by Console itself and operators."
+    aliases: ["csay", "cs"]
+    usage: "/consolesay <message>"
+    permission: "core.consolesay"
+    permission-message: "You can't use that command."
+  broadcast:
+    description: "Broadcasts a message to Discord and to the Server."
+    aliases: ["bcast", "corebc", "bc"]
+    usage: "/broadcast <message>"
+    permission: "core.broadcast"
+    permission-message: "You can't use that command."
+  randomteleport:
+    description: "Teleports the player to a random place in the world."
+    aliases: ["rtp"]
+    usage: "/randomteleport"
+    permission: "core.randomteleport"
+  eval:
+    description: "Evaluates JS code."
+    usage: "/eval <code>"
+  name:
+    description: "Names the item currently in your hand."
+    usage: "/name <newName>"
+    permission: "core.name"
+  plugins:
+    description: "Disallows normal users to see the plugins list."
+    usage: "/plugins"
+    aliases: ["pl"]
+  delayedrestart:
+    description: "Restarts the server in 5 seconds, with a countdown."
+    usage: "/delayedrestart"
+    aliases: ["drestart"]
+    permission: "core.delayedrestart"
+  playerhead:
+    description: "Give yourself the given player's head."
+    usage: "/playerhead <player>"
+    aliases: ["corehead", "phead"]
+    permission: "core.playerhead"
+
