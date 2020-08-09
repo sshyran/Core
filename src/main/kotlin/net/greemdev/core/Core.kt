@@ -4,12 +4,15 @@ import net.greemdev.core.commands.EvalCommand
 import net.greemdev.core.commands.NameCommand
 import net.greemdev.core.commands.PlayerHeadCommand
 import net.greemdev.core.commands.RandomTeleportCommand
-import net.greemdev.core.listeners.CommandListener
-import net.greemdev.core.listeners.MulticraftListener
+import net.greemdev.core.util.registerCoreEvents
+import org.bukkit.event.EventHandler
+import org.bukkit.event.EventPriority
+import org.bukkit.event.Listener
+import org.bukkit.event.server.ServerCommandEvent
 import org.bukkit.plugin.java.JavaPlugin
 import java.lang.NullPointerException
 
-public object Core : JavaPlugin() {
+public object Core : JavaPlugin(), Listener {
 
     @JvmStatic var plugin: Core? = null
     @JvmStatic fun get(): Core {
@@ -20,7 +23,7 @@ public object Core : JavaPlugin() {
     }
 
     public override fun onEnable() {
-        this.plugin = this;
+        this.plugin = this
         this.logger.info("Loading Core v" + description.version + "...")
         this.registerEverything()
     }
@@ -30,14 +33,8 @@ public object Core : JavaPlugin() {
     }
 
     private fun registerEverything() {
-        registerEvents()
+        get().server.pluginManager.registerCoreEvents()
         registerCommands()
-    }
-
-    private fun registerEvents() {
-        val m = this.server.pluginManager;
-        m.registerEvents(CommandListener(), this)
-        m.registerEvents(MulticraftListener(), this)
     }
 
     private fun registerCommands() {
@@ -45,6 +42,14 @@ public object Core : JavaPlugin() {
         this.getCommand("RandomTeleport")?.setExecutor(RandomTeleportCommand())
         this.getCommand("Name")?.setExecutor(NameCommand())
         this.getCommand("PlayerHead")?.setExecutor(PlayerHeadCommand())
+    }
+
+    @EventHandler(priority = EventPriority.HIGHEST)
+    public fun onServerCommand(event: ServerCommandEvent) {
+        if (event.command == "list") {
+            event.isCancelled = true
+            print(" ")
+        }
     }
 
 }

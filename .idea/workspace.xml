@@ -3,29 +3,44 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b917445-231c-4e91-86d6-fdfd4ce73abe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/Core.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/BroadcastCommand.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/ConsoleSayCommand.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/EvalCommand.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/NameCommand.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/PlayerHeadCommand.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/RandomTeleportCommand.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/listeners/CommandListener.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/listeners/MulticraftListener.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/objects/CommandEvent.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/objects/TeleportCoords.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/util/CommandUtil.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/util/FormatUtil.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/util/ServerUtil.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+    <list default="true" id="9b917445-231c-4e91-86d6-fdfd4ce73abe" name="Default Changelist" comment="Extensions and whatnot">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/objects/CommandResult.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/util/Extensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/Core.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/Core.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/BroadcastCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/BroadcastCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/ConsoleSayCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/ConsoleSayCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/EvalCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/EvalCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/NameCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/NameCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/PlayerHeadCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/PlayerHeadCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/RandomTeleportCommand.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/commands/RandomTeleportCommand.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/listeners/CommandListener.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/listeners/CommandListener.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/listeners/MulticraftListener.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/objects/CommandEvent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/objects/CommandEvent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/objects/TeleportCoords.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/objects/TeleportCoords.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/util/CommandUtil.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/util/FormatUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/util/FormatUtil.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/util/ServerUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/greemdev/core/util/ServerUtil.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,11 +137,29 @@
       <workItem from="1596676532623" duration="1495000" />
       <workItem from="1596703929916" duration="810000" />
       <workItem from="1596764207644" duration="1583000" />
+      <workItem from="1596961568627" duration="848000" />
+      <workItem from="1596966522672" duration="1528000" />
+      <workItem from="1596968195244" duration="2366000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Extensions and whatnot" />
+    <option name="LAST_COMMIT_MESSAGE" value="Extensions and whatnot" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1596431063550">
@@ -137,5 +170,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="751" y="235" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1596764888440" />
+    <state x="2610" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596968857744">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2610" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1596968857744" />
+    <state x="2500" y="87" key="CommitChangelistDialog2" timestamp="1596968247317">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2500" y="87" key="CommitChangelistDialog2/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1596968247317" />
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1596967577504">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2543" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1596967577504" />
   </component>
 </project>

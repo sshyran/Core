@@ -1,12 +1,17 @@
 package net.greemdev.core.objects
 
 import org.bukkit.block.Block
+import org.jetbrains.annotations.NotNull
 
-public class TeleportCoords(public val x: Double, public val y: Double, public val z: Double, public val block: Block) {
+public data class TeleportCoords(
+        @NotNull public val x: Double,
+        @NotNull public val y: Double,
+        @NotNull public val z: Double,
+        @NotNull public val highestBlock: Block) {
 
     companion object {
-        public fun from(x: Double, y: Double, z: Double, block: Block): TeleportCoords {
-            return TeleportCoords(x, y, z, block)
+        public fun from(x: Double, y: Double, z: Double, highestBlock: Block): TeleportCoords {
+            return TeleportCoords(x, y, z, highestBlock)
         }
     }
 

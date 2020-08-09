@@ -1,6 +1,6 @@
 package net.greemdev.core.objects
 
-import net.greemdev.core.util.CommandUtil
+import net.greemdev.core.util.*
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
@@ -19,7 +19,7 @@ public data class CommandEvent(
         }
     }
 
-    public val player: Player = Objects.requireNonNull(CommandUtil.asPlayer(sender))
+    public val player: Player = Objects.requireNonNull(sender.asPlayer())
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
@@ -27,12 +27,12 @@ public data class CommandEvent(
 
         other as CommandEvent
 
-        if (sender != other.sender) return false
-        if (command != other.command) return false
-        if (label != other.label) return false
-        if (!args.contentEquals(other.args)) return false
-
-        return true
+        return when {
+            sender != other.sender -> false
+            command != other.command -> false
+            label != other.label -> false
+            else -> args.contentEquals(other.args)
+        }
     }
 
     override fun hashCode(): Int {
