@@ -1,6 +1,7 @@
 package net.greemdev.core.listeners
 
 import net.greemdev.core.util.*
+import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
@@ -13,7 +14,7 @@ public class CommandListener: Listener {
 
     @EventHandler(priority = EventPriority.HIGHEST)
     public fun onPlayerCommand(event: PlayerCommandPreprocessEvent) {
-        ServerUtil.getOnlineOps().forEach { p: Player ->
+        Bukkit.getServer().getOnlineOps().forEach { p: Player ->
             if (p.name != event.player.name) {
                 p.sendCoreMessage(ChatColor.DARK_AQUA.toString() + event.player.name
                         + ChatColor.AQUA.toString() + " used command " + ChatColor.DARK_AQUA + event.message)
@@ -24,10 +25,9 @@ public class CommandListener: Listener {
     @EventHandler(priority = EventPriority.HIGHEST)
     public fun onServerCommand(event: ServerCommandEvent) {
         if (event.command == "list") return
-        ServerUtil.getOnlineOps().forEach { p: Player ->
+        Bukkit.getServer().getOnlineOps().forEach { p: Player ->
                 p.sendCoreMessage(ChatColor.DARK_AQUA.toString() + "CONSOLE"
                         + ChatColor.AQUA + " used command " + ChatColor.DARK_AQUA + "/" + event.command)
-
         }
 
     }

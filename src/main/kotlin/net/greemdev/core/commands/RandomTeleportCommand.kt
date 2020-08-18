@@ -17,7 +17,7 @@ public class RandomTeleportCommand: CommandExecutor {
     }
 
     private fun executeCommand(event: CommandEvent): CommandResult {
-        if (event.sender.warnIfNotAuthorized("core.randomteleport") ||
+        if (event.sender.warnIfNotAuthorized("core.randomteleport") or
             event.sender.warnIfConsole()) return CommandResult.unsuccessful()
 
         var coords: TeleportCoords

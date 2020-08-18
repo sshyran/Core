@@ -15,13 +15,13 @@ public class PlayerHeadCommand: CommandExecutor {
     }
 
     private fun executeCommand(event: CommandEvent): CommandResult {
-        if (event.sender.warnIfNotAuthorized("core.playerhead") ||
-            event.sender.warnIfEmptyArgs(event.args) ||
+        if (event.sender.warnIfNotAuthorized("core.playerhead") or
+            event.sender.warnIfEmptyArgs(event.args) or
             event.sender.warnIfConsole()) return CommandResult.unsuccessful()
 
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "minecraft:give " + event.player.name + " minecraft:player_head{SkullOwner:\"" + event.args.first() + "\"}")
         event.player.sendCoreMessage(
-                ChatColor.GOLD.toString() + "You've been given " +
+                FormatUtil.getMessagePrefix() + "You've been given " +
                 ChatColor.DARK_AQUA + ChatColor.BOLD + event.args.first() +
                 ChatColor.RESET + ChatColor.GOLD + "'s head.")
         return CommandResult.successful()

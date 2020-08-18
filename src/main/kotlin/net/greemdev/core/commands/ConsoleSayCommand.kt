@@ -16,11 +16,11 @@ public class ConsoleSayCommand: CommandExecutor {
     }
 
     private fun executeCommand(event: CommandEvent): CommandResult {
-        if (!event.sender.isAdmin() || event.sender.warnIfEmptyArgs(event.args)) return CommandResult.unsuccessful()
+        if (!event.sender.isAdmin() or event.sender.warnIfEmptyArgs(event.args)) return CommandResult.unsuccessful()
 
         DiscordSRV.getPlugin().mainTextChannel.sendMessage("[Console] \u00BB " + event.args.join(" ")).queue()
         Bukkit.getServer().broadcastMessage(ChatColor.GRAY.toString() + "[" + ChatColor.DARK_RED + ChatColor.BOLD + "Console" + ChatColor.GRAY + "]"
-                + ChatColor.RESET + ": " + event.args.joinToString(separator = " "))
+                + ChatColor.RESET + ": " + event.args.join(" "))
 
         return CommandResult.successful()
     }

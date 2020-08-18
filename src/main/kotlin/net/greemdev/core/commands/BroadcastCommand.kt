@@ -16,12 +16,12 @@ public class BroadcastCommand: CommandExecutor {
     }
 
     private fun executeCommand(event: CommandEvent): CommandResult {
-        if (event.sender.warnIfNotAuthorized("core.broadcast") ||
+        if (event.sender.warnIfNotAuthorized("core.broadcast") or
                 event.sender.warnIfEmptyArgs(event.args)) return CommandResult.unsuccessful()
         DiscordSRV.getPlugin().mainTextChannel.sendMessage("[**Broadcast**]: " + event.args.join(" ")).queue()
         Bukkit.getServer().broadcastMessage(ChatColor.DARK_RED.toString() + "[" + ChatColor.DARK_AQUA + ChatColor.BOLD +
                 "Broadcast" + ChatColor.RESET + ChatColor.DARK_RED + "]" + ChatColor.GRAY + ": "
-                + event.args.joinToString(separator = " "))
+                + event.args.join(" "))
         return CommandResult.successful()
     }
 }

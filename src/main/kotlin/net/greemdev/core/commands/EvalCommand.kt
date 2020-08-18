@@ -19,7 +19,7 @@ public class EvalCommand: CommandExecutor {
     }
 
     private fun executeCommand(event: CommandEvent): CommandResult {
-        if (event.sender.warnIfNotAuthorized("") || event.sender.warnIfEmptyArgs(event.args)) return CommandResult.unsuccessful()
+        if (event.sender.warnIfNotAuthorized("") or event.sender.warnIfEmptyArgs(event.args)) return CommandResult.unsuccessful()
         val code = event.args.join(" ")
         val se = ScriptEngineManager().getEngineByName("js")
         se.put("server", event.sender.server)
@@ -32,10 +32,10 @@ public class EvalCommand: CommandExecutor {
         }
 
         try {
-            val o: Any? = se.eval(code)
-            event.sender.sendCoreMessage(ChatColor.DARK_RED.toString() + "Output from Eval: " + ChatColor.RED + o.toString())
+            val o = se.eval(code)
+            event.sender.sendCoreMessage(FormatUtil.getMessagePrefix() + "Output from Eval: " + ChatColor.RED + o)
         } catch (e: ScriptException) {
-            event.sender.sendCoreMessage(ChatColor.DARK_RED.toString() + "That code produced an error: " + ChatColor.RED + e.message)
+            event.sender.sendCoreMessage(FormatUtil.getMessagePrefix() + "That code produced an error: " + ChatColor.RED + e.message)
         }
         return CommandResult.successful()
     }

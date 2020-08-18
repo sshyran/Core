@@ -14,13 +14,13 @@ public class NameCommand: CommandExecutor {
     }
 
     private fun executeCommand(event: CommandEvent): CommandResult {
-        if (event.sender.warnIfNotAuthorized("core.name")
-            || event.sender.warnIfConsole()) return CommandResult.unsuccessful()
+        if (event.sender.warnIfNotAuthorized("core.name") or
+            event.sender.warnIfConsole()) return CommandResult.unsuccessful()
 
         val item = event.player.inventory.itemInMainHand
         val meta = item.itemMeta
 
-        if (event.sender.warnIf(meta == null, "You're not holding anything.") ||
+        if (event.sender.warnIf(meta == null, "You're not holding anything.") or
                 event.sender.warnIfEmptyArgs(event.args)) return CommandResult.unsuccessful()
 
         meta.setDisplayName(event.args.join(" "))

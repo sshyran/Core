@@ -1,16 +1,20 @@
 package net.greemdev.core.util
 
 import net.greemdev.core.Core
+import net.greemdev.core.commands.*
 import net.greemdev.core.listeners.CommandListener
 import net.greemdev.core.objects.CommandResult
 import net.greemdev.core.objects.TeleportCoords
+import org.bukkit.Bukkit
 import org.bukkit.ChatColor
+import org.bukkit.Server
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.command.ConsoleCommandSender
 import org.bukkit.entity.Player
 import org.bukkit.plugin.PluginManager
 import java.util.*
+import java.util.stream.Collectors
 
 private val random: Random = Random()
 
@@ -71,4 +75,30 @@ public fun PluginManager.registerCoreEvents() {
 
 public fun CommandExecutor.analyzeResult(result: CommandResult): Boolean {
     return result.successful
+}
+
+public fun Server.getOnlineOps(): List<Player> {
+    return this.onlinePlayers.stream().filter { p: Player ->
+        p.isAdmin()
+    }.collect(Collectors.toList())
+}
+
+public fun Server.getOnlineNormalPlayers(): List<Player> {
+    return this.onlinePlayers.stream().filter { p: Player ->
+        !p.isAdmin()
+    }.collect(Collectors.toList())
+}
+
+public fun Core.registerEverything() {
+    this.get().server.pluginManager.registerCoreEvents()
+    registerCommands()
+}
+
+public fun Core.registerCommands() {
+    this.getCommand("Eval")?.setExecutor(EvalCommand())
+    this.getCommand("RandomTeleport")?.setExecutor(RandomTeleportCommand())
+    this.getCommand("Name")?.setExecutor(NameCommand())
+    this.getCommand("PlayerHead")?.setExecutor(PlayerHeadCommand())
+    this.getCommand("Broadcast")?.setExecutor(BroadcastCommand())
+    this.getCommand("ConsoleSay")?.setExecutor(ConsoleSayCommand())
 }

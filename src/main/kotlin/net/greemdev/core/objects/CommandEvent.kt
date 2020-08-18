@@ -22,8 +22,9 @@ public data class CommandEvent(
     public val player: Player = Objects.requireNonNull(sender.asPlayer())
 
     override fun equals(other: Any?): Boolean {
+        if (other === null) return false;
         if (this === other) return true
-        if (javaClass != other?.javaClass) return false
+        if (javaClass != other.javaClass) return false
 
         other as CommandEvent
 
@@ -33,13 +34,5 @@ public data class CommandEvent(
             label != other.label -> false
             else -> args.contentEquals(other.args)
         }
-    }
-
-    override fun hashCode(): Int {
-        var result = sender.hashCode()
-        result = 31 * result + command.hashCode()
-        result = 31 * result + label.hashCode()
-        result = 31 * result + args.contentHashCode()
-        return result
     }
 }
